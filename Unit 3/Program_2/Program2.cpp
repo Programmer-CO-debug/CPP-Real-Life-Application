@@ -1,60 +1,74 @@
-#include <iostream> 
-using namespace std; 
- 
-class Complex { 
+
+#include <iostream>
+using namespace std;
+
+class Complex
+{
 private:
- double real; 
- double imag; 
- 
-public: 
-    Complex(double r = 0.0, double i = 0.0) : {
-    real = r;
-      imag = i;
+    double real;
+    double imag;
+
+public:
+    Complex(double r = 0.0, double i = 0.0)
+    {
+        real = r;
+        imag = i;
     }
- 
+
     // Addition
-    Complex operator+(const Complex& other) const {
+    Complex operator+(const Complex& other) const
+    {
         return Complex(real + other.real, imag + other.imag);
     }
 
     // Subtraction
-    Complex operator-(const Complex& other) const {
+    Complex operator-(const Complex& other) const
+    {
         return Complex(real - other.real, imag - other.imag);
     }
 
     // Multiplication
-    Complex operator*(const Complex& other) const {
+    Complex operator*(const Complex& other) const
+    {
         return Complex(
             real * other.real - imag * other.imag,
             real * other.imag + imag * other.real
         );
     }
+
     // Equality
-    bool operator==(const Complex& other) const {
+    bool operator==(const Complex& other) const
+    {
         return real == other.real && imag == other.imag;
     }
 
     // Display
-    void display() const {
+    void display() const
+    {
         cout << real << " + " << imag << "i" << endl;
     }
 };
- 
-int main() {
-   Complex c1(3.0, 4.0); 
-    Complex c2(1.0, 2.0); 
- 
-    cout << "C1: "; 
-    c1.display(); 
-    cout << "C2: "; 
-    c2.display(); 
- 
-    cout << "Sum: "; 
-    (c1 + c2).display(); 
- 
-    cout << "Difference: "; 
-    (c1 - c2).display(); 
- 
-    cout << "Product: "; 
-    (c1 * c2).display(); 
+
+int main()
+{
+    Complex c1(3.0, 4.0);
+    Complex c2(1.0, 2.0);
+
+    cout << "C1: ";
+    c1.display();
+
+    cout << "C2: ";
+    c2.display();
+
+    cout << "Sum: ";
+    (c1 + c2).display();
+
+    cout << "Difference: ";
+    (c1 - c2).display();
+
+    cout << "Product: ";
+    (c1 * c2).display();
+
+    return 0;
 }
+
