@@ -1,23 +1,25 @@
-#include <iostream> 
-#include <string> 
-#include <vector> 
-using namespace std; 
- 
-class SoilSensor { 
-private: 
-    string sensorId; 
-    string timestamp; 
- 
-public: 
-    SoilSensor(string i, float m) 
-        {
-        id = i;
+```cpp
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+class SoilSensor
+{
+private:
+    string sensorId;
+    float moisture;
+
+public:
+    SoilSensor(string i, float m)
+    {
+        sensorId = i;
         moisture = m;
     }
 
     void display()
     {
-        cout << "Sensor ID: " << id << endl;
+        cout << "Sensor ID: " << sensorId << endl;
         cout << "Moisture: " << moisture << "%" << endl;
     }
 
@@ -29,8 +31,8 @@ public:
 
 int main()
 {
-    Sensor s1("S001", 45.2);
-    Sensor s2("S002", 52.8);
+    SoilSensor s1("S001", 45.2);
+    SoilSensor s2("S002", 52.8);
 
     cout << "Sensor Details\n";
 
@@ -40,8 +42,10 @@ int main()
     s2.display();
 
     cout << "\nAfter Updating S1:\n";
+
     s1.update(47.5);
     s1.display();
 
     return 0;
 }
+```
