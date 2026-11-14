@@ -1,0 +1,4 @@
+120|"Atomic Habits"|"James Clear"|Motivational|1
+978003|Atomic Habits|James Clear|Self-Help|1
+978004|The Alchemist|Paulo Coelho|Fiction|1
+978005|The C++ Programming Language|Bjarne Stroustrup|Programming|1
